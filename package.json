@@ -1,0 +1,31 @@
+{
+  "name": "aicofficial",
+  "version": "1.0.0",
+  "description": "n.js website",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndyIsCool5463/aicofficial.git"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "AndyIsCool5463",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndyIsCool5463/aicofficial/issues"
+  },
+  "homepage": "https://github.com/AndyIsCool5463/aicofficial#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "next": "^7.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}
