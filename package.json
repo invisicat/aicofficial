@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/AndyIsCool5463/aicofficial#readme",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "cowsay-browser": "^1.1.8",
     "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",

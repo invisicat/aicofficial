@@ -1,15 +1,11 @@
+import { withRouter } from "next/router";
 import Layout from "../components/MyLayout.js";
-import fetch from "isomorphic-unfetch";
 
-const Post = props => (
+const Page = withRouter(props => (
   <Layout>
-    <h1>{props}</h1>
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book.
-    </p>
+    <h1>{props.router.query.title}</h1>
+    <p>This is the blog post content.</p>
   </Layout>
-);
-export default Post;
+));
+
+export default Page;

@@ -1,0 +1,40 @@
+.main {
+  background: #7289da;
+  padding-top: 1px;
+  padding-bottom: 10px;
+  border: groove;
+  border-color: #99aab5;
+  border-radius: 10px;
+}
+#headA {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: Arial;
+  color: lightblue;
+  text-decoration: none;
+}
+#headA:hover {
+  color: black;
+  background: #ffffff;
+  border-radius: 15px;
+  transition: 800ms ease all;
+}
+/*
+const linkStyle = {
+  marginLeft: 10,
+  marginRight: 15,
+  fontFamily: "Arial",
+  color: "lightblue",
+  textDecoration: "none"
+};
+*/
+/*
+const s = {
+  background: "#7289DA",
+  paddingTop: 10,
+  paddingBottom: 10,
+  border: "groove",
+  borderColor: "#99AAB5",
+  borderRadius: 10
+};
+*/
