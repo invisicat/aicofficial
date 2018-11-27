@@ -1,16 +1,30 @@
 import Link from "next/link";
-import "../CSS/Components/Header.css";
-
+import colors from "../functions/discordColors.js";
+const linkStyle = {
+  marginLeft: 10,
+  marginRight: 15,
+  fontFamily: "Arial",
+  color: colors.dark,
+  textDecoration: "none"
+};
+const s = {
+  background: colors.greyple,
+  paddingTop: 10,
+  paddingBottom: 10,
+  border: "groove",
+  borderColor: "#99AAB5",
+  borderRadius: 10
+};
 const Header = () => (
-  <div className="main">
+  <div style={s}>
     <Link href="/">
-      <a id="headA">Home</a>
+      <a style={linkStyle}>Home</a>
     </Link>
     <Link href="/about">
-      <a id="headA">About</a>
+      <a style={linkStyle}>About</a>
     </Link>
     <Link href="/contact">
-      <a id="headA">Contact</a>
+      <a style={linkStyle}>Contact</a>
     </Link>
   </div>
 );

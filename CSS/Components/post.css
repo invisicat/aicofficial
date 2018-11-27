@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Mukta|Muli");
+/* 
+  * {
+    font-family: sans-serif;
+  }
+  h1 {
+    color: blue;
+    font-family: K2D, sans-serif;
+  }
+  p {
+    font-family: sans-serif, Arial;
+    font-size: 24px;
+    color: darkgreen;
+  }
+*/
+
+* {
+  font-family: sans-serif;
+}
+h1 {
+  color: white;
+  font-family: Muli, sans-serif;
+}
+p {
+  font-family: Mukta, sans-sans-serif;
+  font-size: 24px;
+  color: yellow;
+}

@@ -1,9 +1,9 @@
 import Layout from "../components/MyLayout.js";
-import "../CSS/Pages/about.css";
 export default () => (
   <Layout>
-    <h1 class="example">About</h1>
-    <div id="main">
+    <h1 className="example">About</h1>
+    <link href="/static/about.css" rel="stylesheet" />
+    <div id="e">
       <p>
         This is the about page, Im just gonna test features on here, mainly css
         and some packages.

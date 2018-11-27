@@ -1,6 +1,6 @@
 const express = require("express");
 const next = require("next");
-
+const fs = require("fs");
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -12,7 +12,7 @@ app
 
     server.get("/p/:id", (req, res) => {
       const actualPage = "/post";
-      const queryParams = { id: req.params.id };
+      const queryParams = { id: req.params.id, oof: req };
       app.render(req, res, actualPage, queryParams);
     });
     // server.get("/moo", (req, res) => {
@@ -25,7 +25,7 @@ app
 
     server.listen(3000, err => {
       if (err) throw err;
-      Console.log("> Ready on http://localhost:3000");
+      console.log("> Ready on http://localhost:3000");
     });
   })
   .catch(ex => {
