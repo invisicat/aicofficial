@@ -1,8 +1,9 @@
 language: node_js
-install:
-  - npm install codegov
 node_js:
   - "iojs"
   - "8"
+install:
+  - npm install -g codecov
 script:
+  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
   - codecov
