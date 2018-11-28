@@ -8,7 +8,7 @@ const Page = props => (
         href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
       />
       <p>Contact me some way idk confusing af to use Next.js</p>
-      <i class="fas fa-adjust" />
+      <i class="fab fa-github-square" />
     </div>
   </Layout>
 );

@@ -214,14 +214,30 @@ const cowWords = [
 export default () => (
   <Layout>
     <link href="../CSS/Pages/index.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
+      integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+      crossorigin="anonymous"
+    />
     <h1>My Blog</h1>
     <ul>
       <div class="mini" id="min">
         <a id="postTitle">Posts</a>
       </div>
       <PostLink id="hello-nextjs" title="Hello Next.js" />
-      <PostLink id="learn-nextjs" title="Learn Next.js is awesome" />
-      <PostLink id="deploy-nextjs" title="Deploy apps with Zeit" />
+      <PostLink
+        id="learn-nextjs"
+        title="Learn Next.js is awesome"
+        text={
+          "Totally its not ${<b>}CONFUSING</b> (see? bold text doesnt work) or does ${<b>this</b>}"
+        }
+      />
+      <PostLink
+        id="deploy-nextjs"
+        title="Deploy apps with Zeit"
+        text="Zeit? Whats Zeit?"
+      />
       <PostLink
         id={
           cowWords[MathArray(cowWords.length)] +
@@ -238,6 +254,17 @@ export default () => (
       1500s, when an unknown printer took a galley of type and scrambled it to
       make a type specimen book.
     </p>
+    <div className="main">
+      <p id="main_p">Next.js Experiemental Website.</p>
+      <p>
+        Experimental Website made in Next.js. Following the tutorial, this was
+        the only way this was made. The Github can be acess from here:
+        <i class="fab fa-github-square" />
+        <Link href="https://github.com/andyiscool5463/aicofficial">
+          <a>Github</a>
+        </Link>
+      </p>
+    </div>
     <style jsx>{`
       * {
         font-family: sans-serif;
@@ -270,6 +297,13 @@ export default () => (
       }
       a {
         color: ${colors.blurple};
+      }
+      .main {
+        border: groove;
+      }
+      #main_p {
+        text-align: center;
+        color: orange;
       }
     `}</style>
   </Layout>

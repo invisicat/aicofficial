@@ -13,7 +13,7 @@ const oof = {
 const Layout = props => (
   <html style={oof}>
     <div style={layoutStyle}>
-      <title>My Site</title>
+      <title>Next.js - Home</title>
       <Header />
       {props.children}
     </div>

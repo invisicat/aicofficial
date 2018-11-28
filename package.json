@@ -8,6 +8,9 @@
     "start": "next start -p 8000",
     "dev": "next"
   },
+  "engine": {
+    "version": "8.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AndyIsCool5463/aicofficial.git"
