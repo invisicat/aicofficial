@@ -12,6 +12,7 @@ const oof = {
 };
 const Layout = props => (
   <html style={oof}>
+    <link rel="icon" type="image/x-icon" href="/favicon-32x320.ico" />
     <div style={layoutStyle}>
       <title>Next.js - Home</title>
       <Header />

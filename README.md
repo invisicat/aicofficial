@@ -1,4 +1,4 @@
-# Website
+# Next.js Website
 
 [![Build Status](https://travis-ci.org/AndyIsCool5463/aicofficial.svg?branch=master)](https://travis-ci.org/AndyIsCool5463/aicofficial)
 
