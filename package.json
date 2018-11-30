@@ -6,7 +6,8 @@
   "scripts": {
     "build": "next build",
     "start": "node server.js",
-    "dev": "next"
+    "dev": "next",
+    "export": "next export"
   },
   "engine": {
     "version": "8.x"
