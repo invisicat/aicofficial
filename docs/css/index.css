@@ -1,3 +1,58 @@
-p {
-  color: green;
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+TC|Ubuntu");
+
+.nav {
+  position: sticky;
+  left: 60%;
+  top: 3px;
+  filter: opacity(0.9);
+  background: #24292e;
+}
+body {
+  background-image: url("css_resources/Pictures/index_paper.jpg");
+}
+.nav ul {
+  list-style: none;
+  color: white;
+  opacity: 1;
+}
+.nav ul li {
+  list-style: none;
+  display: inline-block;
+  font-family: Arial;
+  padding: 5px 60px;
+  transition: 1s ease-in-out;
+}
+.nav ul li:hover {
+  list-style: none;
+  display: inline-block;
+  font-family: Noto Sans TC;
+  padding: 5px 60px;
+  background: white;
+  color: #24292e;
+  cursor: pointer;
+}
+.head {
+  padding: 20px;
+  filter: opacity(0.8);
+  background: #2c2f33;
+}
+.head > h1 {
+  color: #fff;
+  font-family: Montserrat;
+  margin-top: 50px;
+  text-align: center;
+}
+.body {
+  background: #24292e;
+}
+.body > p {
+  color: white;
+  font-family: Noto Sans TC;
+  padding: 20px;
+}
+.body > h1 {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  font-family: Ubuntu;
 }
