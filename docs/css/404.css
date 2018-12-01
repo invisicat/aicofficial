@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Arimo");
+
+body {
+  background-color: #2c2f33;
+}
+.body > h1 {
+  color: white;
+  font-family: Arimo;
+  font-size: 100px;
+  text-align: center;
+}
+.pic {
+  text-align: center;
+  font-size: 200px;
+  color: white;
+  border-style: dotted;
+  border-color: white;
+  transition: 800ms ease all;
+}
+.pic:hover {
+  color: black;
+}
+
+#null2 {
+  color: white;
+  text-align: center;
+  font-family: Arimo;
+  font-size: 40px;
+}
+
+#pp {
+  color: white;
+  text-align: center;
+  font-family: Arimo;
+  font-size: 20px;
+}
+a {
+  font-weight: bold;
+  color: white;
+}
