@@ -56,3 +56,11 @@ body {
   padding-top: 10px;
   font-family: Ubuntu;
 }
+.footer > h5 {
+  color: white;
+  text-align: right;
+  font-family: Montserrat;
+}
+.footer:hover {
+  cursor: pointer;
+}
