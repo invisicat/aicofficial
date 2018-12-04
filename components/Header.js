@@ -5,7 +5,11 @@ const linkStyle = {
   marginRight: 15,
   fontFamily: "Arial",
   color: colors.dark,
-  textDecoration: "none"
+  textAlign: "right",
+  textDecoration: "none",
+  textTransform: "uppercase",
+  border: "1px solid white",
+  padding: 5
 };
 const s = {
   background: colors.greyple,
@@ -28,6 +32,9 @@ const Header = () => (
     </Link>
     <Link href="/archive">
       <a style={linkStyle}>Archive</a>
+    </Link>
+    <Link href="/login">
+      <a style={linkStyle}>Login</a>
     </Link>
   </div>
 );

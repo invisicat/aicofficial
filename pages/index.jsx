@@ -62,11 +62,11 @@ export default () => (
       defer
       src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
       integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
-      crossorigin="anonymous"
+      crossOrigin="anonymous"
     />
     <h1>My Blog</h1>
     <ul>
-      <div class="mini" id="min">
+      <div className="mini" id="min">
         <a id="postTitle">Posts</a>
       </div>
       <PostLink id="hello-nextjs" title="Hello Next.js" />
@@ -109,7 +109,7 @@ export default () => (
       <p>
         Experimental Website made in Next.js. Following the tutorial, this was
         the only way this was made. The Github can be acess from here:
-        <i class="fab fa-github-square" />
+        <i className="fab fa-github-square" />
         <Link href="https://github.com/andyiscool5463/aicofficial">
           <a>Github</a>
         </Link>
