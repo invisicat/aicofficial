@@ -34,10 +34,10 @@ const img = {
 
 const s = {
   background: colors.greyple,
-  paddingTop: 10,
+  paddingTop: 25,
   textAlign: "right",
-  paddingBottom: 10,
-  borderColor: "#99AAB5"
+  paddingBottom: 25,
+  borderColor: "#34495e"
 };
 const oof = {
   textAlign: "center"
@@ -54,9 +54,9 @@ const Header = () => (
     <Link href="/">
       <a style={linkStyle}>Home</a>
     </Link>
-    <span>
-      <img style={img} src="https://image.ibb.co/djx0P7/11.jpg" />
-    </span>
+    <Link href="/">
+      <a style={linkStyle}>Invite Bot!</a>
+    </Link>
     <Link>SETTINGS</Link>
     <Link href="/logout">
       <a style={linkStyle}>Logout</a>

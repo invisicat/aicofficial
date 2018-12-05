@@ -1,8 +1,10 @@
 import Header from "./Header";
+import colors from "../functions/discordColors.js";
 const layoutStyle = {
   margin: 20,
   padding: 20,
-  background: "white",
+  background: colors.dark,
+  border: "1px solid white",
   fontFamily: "sans-serif"
 };
 

@@ -1,6 +1,6 @@
 import Header from "./dashboardHead.js";
 import colors from "../functions/discordColors.js";
-const layoutStyle = {
+const alayoutStyle = {
   margin: 20,
   padding: 20,
   border: "1px solid #DDD",
@@ -8,13 +8,13 @@ const layoutStyle = {
   fontFamily: "sans-serif"
 };
 
-const oof = {
+const oofa = {
   background: colors.black
 };
 const Layout = props => (
-  <html style={oof}>
-    <link rel="icon" type="image/x-icon" href="/favicon-32x320.ico" />
-    <div style={layoutStyle}>
+  <html style={oofa}>
+    <link rel="icon" type="image/x-icon" href="/favicon-32x32.ico" />
+    <div style={alayoutStyle}>
       <title>Next.js - Home</title>
       <Header />
       {props.children}
