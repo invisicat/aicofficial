@@ -1,13 +1,15 @@
-import Header from "./Header";
+import Header from "./dashboardHead.js";
+import colors from "../functions/discordColors.js";
 const layoutStyle = {
   margin: 20,
   padding: 20,
-  background: "white",
+  border: "1px solid #DDD",
+  background: colors.darkblack,
   fontFamily: "sans-serif"
 };
 
 const oof = {
-  background: "#23272A"
+  background: colors.black
 };
 const Layout = props => (
   <html style={oof}>

@@ -14,9 +14,7 @@ const s = {
   background: colors.greyple,
   paddingTop: 10,
   paddingBottom: 10,
-  border: "groove",
-  borderColor: "#99AAB5",
-  borderRadius: 10
+  borderColor: "#99AAB5"
 };
 const Header = () => (
   <div style={s}>

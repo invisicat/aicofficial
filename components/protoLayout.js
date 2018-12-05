@@ -1,8 +1,9 @@
-import Header from "./Header";
+import Header from "./protoHeader";
 const layoutStyle = {
   margin: 20,
   padding: 20,
-  background: "white",
+  border: "1px solid #DDD",
+  background: "#2C2F33",
   fontFamily: "sans-serif"
 };
 
