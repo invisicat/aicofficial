@@ -91,6 +91,12 @@ app
       app.render(req, res, actualPage, queryParams);
     });
 
+    server.get("/udb/manage", checkAuth, function(req, res) {
+      const actualPage = "/manage";
+      const queryParams = {};
+      app.render(req, res, actualPage, queryParams);
+    });
+
     // End
 
     server.get("/p/:id", (req, res) => {

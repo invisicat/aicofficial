@@ -4,18 +4,58 @@ import { withRouter } from "next/router";
 import MathArray from "../functions/MathArray.js";
 import Hex from "../functions/hexGen.js";
 const names = ["allah", "kwe", "fhuf", "f"];
+
+const TestArray = props => {
+  return props.array.map((f, i) => {
+    return (
+      <tr>
+        <th>{f.name}</th>
+        <th>
+          <img
+            class="settingsguildimg"
+            src={`https://cdn.discordapp.com/icons/${f.id}/${
+              f.icon
+            }.png?size=64`}
+          />
+        </th>
+        <th>{f.id}</th>
+        <th>{f.owner}</th>
+        <th>{f.permissions}</th>
+      </tr>
+    );
+  });
+};
+
 const Page = withRouter(props => (
   <Layout>
-    <h1>Welcome, {props.router.query.json.username}</h1>
-    <span id="management" class="main-Menu-Buttons">
-      Server Management
-    </span>
-    <span id="log" class="main-Menu-Buttons">
-      Mod Log
-    </span>
-    <span id="selectserver" href="#info" class="main-Menu-Buttons">
-      Your Info
-    </span>
+    <h1>
+      Welcome, {props.router.query.json.username}{" "}
+      <span>
+        <img
+          class="avatar"
+          align="center"
+          src={`https://cdn.discordapp.com/avatars/${
+            props.router.query.json.id
+          }/${props.router.query.json.avatar}.png?size=64`}
+        />
+      </span>
+    </h1>
+
+    <a href="/udb/manage" class="menubuttons">
+      <span id="management" class="main-Menu-Buttons">
+        Server Management
+      </span>
+    </a>
+    <a href="/log" class="menubuttons">
+      <span id="log" class="main-Menu-Buttons">
+        Mod Log
+      </span>
+    </a>
+    <a href="#info" class="menubuttons">
+      <span id="selectserver" href="#info" class="main-Menu-Buttons">
+        Your Info
+      </span>
+    </a>
     <p id="titledesc">Here are Thonking's Bot Commands and Settings.</p>
     <h1>Settings</h1>
     <p id="settingsdesc">You can change your bot's settings here.</p>
@@ -34,7 +74,7 @@ const Page = withRouter(props => (
       <b>User ID</b>: {props.router.query.json.id}
     </p>
     <p class="infoSettings">
-      <b>Avatar (Base64)</b>:{" "}
+      <b>Avatar (Discord CDN)</b>:{" "}
       <Link
         href={`https://cdn.discordapp.com/avatars/${
           props.router.query.json.id
@@ -54,10 +94,7 @@ const Page = withRouter(props => (
       <b>Provider</b>: {props.router.query.json.provider}
     </p>
     <h2>Guilds</h2>
-    <p id="settingsguildsdesc">
-      Here are your guilds that you've joined. (Listing only 5 because of
-      limitations)
-    </p>
+    <p id="settingsguildsdesc">Here are your guilds that you've joined.</p>
     <table align="center">
       <tr>
         <th>Server Name</th>
@@ -66,80 +103,14 @@ const Page = withRouter(props => (
         <th>Owner?</th>
         <th>Permission #</th>
       </tr>
-      <tr>
-        <th>{props.router.query.json.guilds[1].name}</th>
-        <th>
-          <img
-            class="settingsguildimg"
-            src={`https://cdn.discordapp.com/icons/${
-              props.router.query.json.guilds[1].id
-            }/${props.router.query.json.guilds[1].icon}.png?size=64`}
-          />
-        </th>
-        <th>{props.router.query.json.guilds[1].id}</th>
-        <th>{props.router.query.json.guilds[1].owner}</th>
-        <th>{props.router.query.json.guilds[1].permissions}</th>
-      </tr>
-      <tr>
-        <th>{props.router.query.json.guilds[2].name}</th>
-        <th>
-          <img
-            class="settingsguildimg"
-            src={`https://cdn.discordapp.com/icons/${
-              props.router.query.json.guilds[2].id
-            }/${props.router.query.json.guilds[2].icon}.png?size=64`}
-          />
-        </th>
-        <th>{props.router.query.json.guilds[2].id}</th>
-        <th>{props.router.query.json.guilds[2].owner}</th>
-        <th>{props.router.query.json.guilds[2].permissions}</th>
-      </tr>
-      <tr>
-        <th>{props.router.query.json.guilds[3].name}</th>
-        <th>
-          <img
-            class="settingsguildimg"
-            src={`https://cdn.discordapp.com/icons/${
-              props.router.query.json.guilds[3].id
-            }/${props.router.query.json.guilds[3].icon}.png?size=64`}
-          />
-        </th>
-        <th>{props.router.query.json.guilds[3].id}</th>
-        <th>{props.router.query.json.guilds[3].owner}</th>
-        <th>{props.router.query.json.guilds[3].permissions}</th>
-      </tr>
-      <tr>
-        <th>{props.router.query.json.guilds[4].name}</th>
-        <th>
-          <img
-            class="settingsguildimg"
-            src={`https://cdn.discordapp.com/icons/${
-              props.router.query.json.guilds[4].id
-            }/${props.router.query.json.guilds[4].icon}.png?size=64`}
-          />
-        </th>
-        <th>{props.router.query.json.guilds[4].id}</th>
-        <th>{props.router.query.json.guilds[4].owner}</th>
-        <th>{props.router.query.json.guilds[4].permissions}</th>
-      </tr>
-      <tr>
-        <th>{props.router.query.json.guilds[5].name}</th>
-        <th>
-          <img
-            class="settingsguildimg"
-            src={`https://cdn.discordapp.com/icons/${
-              props.router.query.json.guilds[5].id
-            }/${props.router.query.json.guilds[5].icon}.png?size=64`}
-          />
-        </th>
-        <th>{props.router.query.json.guilds[5].id}</th>
-        <th>{props.router.query.json.guilds[5].owner}</th>
-        <th>{props.router.query.json.guilds[5].permissions}</th>
-      </tr>
+      <TestArray array={props.router.query.json.guilds} />
     </table>
     <style>{`
-      @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+      @import url('https://fonts.googleapis.com/css?family=Montserrat');
+      .avatar {
+        border-radius: 50%;
+      }
         .settingsguildimg {
           width: 12;
           height: 12;
@@ -148,6 +119,10 @@ const Page = withRouter(props => (
           border: 1px solid black;
           text-align: center;
           padding: 20px;
+      }
+      .menubuttons {
+        color: black;
+        text-decoration: none;
       }
       tr {
         margin: 20px;
@@ -192,18 +167,18 @@ const Page = withRouter(props => (
       #management {
         background: #2ecc71;
         margin: auto auto auto 550px;
-        transition: 800ms ease all;
+        transition: 600ms ease all;
       }
       #log {
         background: #e67e22;
         margin: auto 10px auto 10px;
-        transition: 1s ease all;
+        transition: 600ms ease all;
       }
 
       #selectserver {
         background: #1abc9c;
         margin: auto 10px auto 10px;
-        transition: 800ms ease all;
+        transition: 600ms ease all;
       }
 
       #management:hover {

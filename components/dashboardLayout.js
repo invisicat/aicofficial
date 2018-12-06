@@ -15,7 +15,7 @@ const Layout = props => (
   <html style={oofa}>
     <link rel="icon" type="image/x-icon" href="/favicon-32x32.ico" />
     <div style={alayoutStyle}>
-      <title>Next.js - Home</title>
+      <title>Next.js - Dashboard</title>
       <Header />
       {props.children}
     </div>

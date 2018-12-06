@@ -28,6 +28,7 @@
   "homepage": "https://github.com/AndyIsCool5463/aicofficial#readme",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "axios": "^0.18.0",
     "connect-mongo": "^2.0.2",
     "cookie-parser": "^1.4.3",
     "cowsay-browser": "^1.1.8",
