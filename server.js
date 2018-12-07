@@ -1,6 +1,7 @@
 const express = require("express");
 const next = require("next");
 const fs = require("fs");
+require("dotenv").config();
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -9,7 +10,6 @@ var session = require("express-session"),
   Strategy = require("./node_modules/passport-discord/lib").Strategy;
 const checkAuth = require("./functions/checkAuth.js");
 //const checkAuth = require("./functions/checkAuth.js");
-require("dotenv").config();
 passport.serializeUser(function(user, done) {
   done(null, user);
 });
