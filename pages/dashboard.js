@@ -3,36 +3,18 @@ import Link from "next/link";
 import { withRouter } from "next/router";
 import MathArray from "../functions/MathArray.js";
 import Hex from "../functions/hexGen.js";
-const names = ["allah", "kwe", "fhuf", "f"];
-
-const TestArray = props => {
-  return props.array.map((f, i) => {
-    return (
-      <tr>
-        <th>{f.name}</th>
-        <th>
-          <img
-            class="settingsguildimg"
-            src={`https://cdn.discordapp.com/icons/${f.id}/${
-              f.icon
-            }.png?size=64`}
-          />
-        </th>
-        <th>{f.id}</th>
-        <th>{f.owner}</th>
-        <th>{f.permissions}</th>
-      </tr>
-    );
-  });
+import Userinfo from "../components/DashboardComponents/userinfoComp.js";
+import ArrayMan from "../components/DashboardComponents/serverArrayManager.js";
+const manual = {
+  marginBottom: 40
 };
-
 const Page = withRouter(props => (
   <Layout>
     <h1>
-      Welcome, {props.router.query.json.username}{" "}
+      Welcome, {props.router.query.json.username}.
       <span>
         <img
-          class="avatar"
+          className="avatar"
           align="center"
           src={`https://cdn.discordapp.com/avatars/${
             props.router.query.json.id
@@ -40,59 +22,28 @@ const Page = withRouter(props => (
         />
       </span>
     </h1>
-
-    <a href="/udb/manage" class="menubuttons">
-      <span id="management" class="main-Menu-Buttons">
+    <h5 align="center" style={manual}>
+      You currently own {props.router.query.user.test}(s) servers.
+    </h5>
+    <a href="/udb/manage" className="menubuttons">
+      <span id="management" className="main-Menu-Buttons">
         Server Management
       </span>
     </a>
-    <a href="/log" class="menubuttons">
-      <span id="log" class="main-Menu-Buttons">
+    <a href="/log" className="menubuttons">
+      <span id="log" className="main-Menu-Buttons">
         Mod Log
       </span>
     </a>
-    <a href="#info" class="menubuttons">
-      <span id="selectserver" href="#info" class="main-Menu-Buttons">
+    <a href="#info" className="menubuttons">
+      <span id="selectserver" href="#info" className="main-Menu-Buttons">
         Your Info
       </span>
     </a>
     <p id="titledesc">Here are Thonking's Bot Commands and Settings.</p>
     <h1>Settings</h1>
     <p id="settingsdesc">You can change your bot's settings here.</p>
-    <h1>{props.router.query.json.username}'s Information</h1>
-    <h6>Last updated on: {props.router.query.json.fetchedAt}</h6>
-    <p class="infoSettings">
-      <b>Name</b>: {props.router.query.json.username}
-    </p>
-    <p class="infoSettings">
-      <b>Verified</b>: {props.router.query.json.verifed}
-    </p>
-    <p class="infoSettings">
-      <b>MFA Enabled</b>: {props.router.query.json.mfa}
-    </p>
-    <p class="infoSettings">
-      <b>User ID</b>: {props.router.query.json.id}
-    </p>
-    <p class="infoSettings">
-      <b>Avatar (Discord CDN)</b>:{" "}
-      <Link
-        href={`https://cdn.discordapp.com/avatars/${
-          props.router.query.json.id
-        }/${props.router.query.json.avatar}.png`}
-      >
-        <a>Here</a>
-      </Link>
-    </p>
-    <p class="infoSettings">
-      <b>Email</b>: {props.router.query.json.email}
-    </p>
-    <p class="infoSettings">
-      <b>Username</b>: {props.router.query.json.username}#
-      {props.router.query.json.discriminator}
-    </p>
-    <p class="infoSettings">
-      <b>Provider</b>: {props.router.query.json.provider}
-    </p>
+    <Userinfo />
     <h2>Guilds</h2>
     <p id="settingsguildsdesc">Here are your guilds that you've joined.</p>
     <table align="center">
@@ -103,8 +54,9 @@ const Page = withRouter(props => (
         <th>Owner?</th>
         <th>Permission #</th>
       </tr>
-      <TestArray array={props.router.query.json.guilds} />
+      <ArrayMan array={props.router.query.json.guilds} />
     </table>
+
     <style>{`
 
       @import url('https://fonts.googleapis.com/css?family=Montserrat');
@@ -134,7 +86,7 @@ const Page = withRouter(props => (
         text-align: center;
       }
       * {
-        font-family: Montserrat;
+        font-family: Montserrat, sans-serif;
       }
       .infoSettings {
         text-align: center;

@@ -9,7 +9,7 @@ var session = require("express-session"),
   passport = require("passport"),
   Strategy = require("./node_modules/passport-discord/lib").Strategy;
 const checkAuth = require("./functions/checkAuth.js");
-//const checkAuth = require("./functions/checkAuth.js");
+const fetchUserData = require("./functions/Dashboard/fetchUserData.js");
 passport.serializeUser(function(user, done) {
   done(null, user);
 });
@@ -77,7 +77,8 @@ app
       req.logout();
       res.redirect("/");
     });
-    server.get("/udb", checkAuth, function(req, res) {
+
+    server.get("/udb", checkAuth, async function(req, res) {
       //  app.render("/dashboard");
       //console.log(req.user)
       //    res.json(req.user);
@@ -87,13 +88,17 @@ app
       ///  res.json(req.user);
       //  res.json(req.user);
       const actualPage = "/dashboard";
-      const queryParams = { json: req.user };
-      app.render(req, res, actualPage, queryParams);
+      const queryParams = {
+        json: req.user,
+        user: await fetchUserData(req.user.id)
+      };
+      await app.render(req, res, actualPage, queryParams);
     });
 
     server.get("/udb/manage", checkAuth, function(req, res) {
       const actualPage = "/manage";
-      const queryParams = {};
+
+      const queryParams = { json: res.json };
       app.render(req, res, actualPage, queryParams);
     });
 
