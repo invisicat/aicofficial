@@ -12,6 +12,7 @@ var session = require("express-session"),
   Strategy = require("./node_modules/passport-discord/lib").Strategy;
 const checkAuth = require("./functions/checkAuth.js");
 const fetchUserData = require("./functions/Dashboard/fetchUserData.js");
+//const fetchBotGuildData = require("./function/Dashboard/fetchBotGuildDaa.js");
 passport.serializeUser(function(user, done) {
   done(null, user);
 });
@@ -95,12 +96,11 @@ app
         json: req.user,
         user: guildsbotisin
       };
-      app.render(req, res, actualPage, queryParams);
+      await app.render(req, res, actualPage, queryParams);
     });
 
     server.get("/udb/manage", checkAuth, function(req, res) {
       const actualPage = "/manage";
-
       const queryParams = { json: res.json };
       app.render(req, res, actualPage, queryParams);
     });

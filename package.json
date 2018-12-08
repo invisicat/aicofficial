@@ -41,6 +41,7 @@
     "istanbul": "^0.4.5",
     "js-cookie": "^2.2.0",
     "mocha": "^5.2.0",
+    "moment-timezone": "^0.5.23",
     "nedb": "^1.8.0",
     "next": "^7.0.2",
     "next-auth": "^1.11.0",

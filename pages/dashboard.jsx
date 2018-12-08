@@ -28,7 +28,11 @@ const Page = withRouter(props => (
       You currently own <b>{props.router.query.user.guildsInside.length}(s)</b>{" "}
       servers with the bot hosted on it.
     </h5>
-    <a href="/udb/manage" className="menubuttons">
+    <a
+      href="/udb/manage"
+      json={props.router.query.json}
+      className="menubuttons"
+    >
       <span id="management" className="main-Menu-Buttons">
         Server Management
       </span>
