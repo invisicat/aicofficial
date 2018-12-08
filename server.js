@@ -88,11 +88,12 @@ app
       ///  res.json(req.user);
       //  res.json(req.user);
       const actualPage = "/dashboard";
+      let guildsbotisin = await fetchUserData(req.user.id);
       const queryParams = {
         json: req.user,
-        user: await fetchUserData(req.user.id)
+        user: guildsbotisin
       };
-      await app.render(req, res, actualPage, queryParams);
+      app.render(req, res, actualPage, queryParams);
     });
 
     server.get("/udb/manage", checkAuth, function(req, res) {

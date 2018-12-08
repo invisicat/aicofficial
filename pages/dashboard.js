@@ -5,25 +5,27 @@ import MathArray from "../functions/MathArray.js";
 import Hex from "../functions/hexGen.js";
 import Userinfo from "../components/DashboardComponents/userinfoComp.js";
 import ArrayMan from "../components/DashboardComponents/serverArrayManager.js";
+import TimeGreeter from "../functions/Dashboard/TimeGreeter.js";
 const manual = {
   marginBottom: 40
 };
+function add(a, b) {
+  return a + b;
+}
 const Page = withRouter(props => (
   <Layout>
-    <h1>
-      Welcome, {props.router.query.json.username}.
-      <span>
-        <img
-          className="avatar"
-          align="center"
-          src={`https://cdn.discordapp.com/avatars/${
-            props.router.query.json.id
-          }/${props.router.query.json.avatar}.png?size=64`}
-        />
-      </span>
-    </h1>
-    <h5 align="center" style={manual}>
-      You currently own {props.router.query.user.test}(s) servers.
+    <TimeGreeter />
+    <h5
+      align="center"
+      style={manual}
+      title={`${
+        props.router.query.user.guildsInside.length
+      } servers with ${props.router.query.user.channels.reduce((a, b) => {
+        return a + b, 0;
+      })} channels.`}
+    >
+      You currently own <b>{props.router.query.user.guildsInside.length}(s)</b>{" "}
+      servers with the bot hosted on it.
     </h5>
     <a href="/udb/manage" className="menubuttons">
       <span id="management" className="main-Menu-Buttons">
@@ -111,7 +113,7 @@ const Page = withRouter(props => (
 				text-align: center;
 			}
       .main-Menu-Buttons {
-        padding: 20px;
+        padding: 20px 20px 20px 20px;
         margin: 200px;
 
       }

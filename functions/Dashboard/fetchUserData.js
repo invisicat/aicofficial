@@ -20,9 +20,15 @@ module.exports = async id => {
     uri: url,
     body: data,
     method: "POST"
-  }).then(body => {
-    return body;
-  });
+  })
+    .then(body => {
+      return JSON.parse(body);
+    })
+    .catch(err => {
+      return JSON.parse({
+        guildsInside: []
+      });
+    });
 
   return kys;
 };
