@@ -71,14 +71,14 @@ app
 
     server.get(
       "/callback",
-      passport.authenticate("discord", { failureRedirect: "/" }),
+      passport.authenticate("discord", { failureRedirect: "/discordError" }),
       function(req, res) {
         res.redirect("/udb");
       } // auth success
     );
     server.get("/logout", function(req, res) {
       req.logout();
-      res.redirect("/");
+      res.redirect("/").end();
     });
 
     server.get("/udb", checkAuth, async function(req, res) {
@@ -101,7 +101,11 @@ app
 
     server.get("/udb/manage", checkAuth, function(req, res) {
       const actualPage = "/manage";
-      const queryParams = { json: res.json };
+      const queryParams = {
+        json: req.body,
+        xd: req.body,
+        jsonF: req.json
+      };
       app.render(req, res, actualPage, queryParams);
     });
 

@@ -1,26 +1,23 @@
 import Header from "./Header";
 import colors from "../functions/discordColors.js";
+import colorGen from "../functions/flatUIColorGenHEX.js";
 const layoutStyle = {
   //  margin: 20,
   //  padding: 20,
   width: "100%",
   height: "100%",
-  background: colors.dark,
-  border: "1px solid white",
+  background: colorGen(),
+  border: "2px solid black",
   fontFamily: "sans-serif"
 };
 
 const oof = {
   width: "100%",
   height: "100%",
-  background: "#23272A"
+  background: "white"
 };
 const Layout = props => (
   <html style={oof}>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-    />
     <link rel="icon" type="image/x-icon" href="/favicon-32x320.ico" />
     <div style={layoutStyle}>
       <title>Next.js - Home</title>

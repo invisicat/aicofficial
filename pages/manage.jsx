@@ -9,7 +9,7 @@ const Page = withRouter(props => (
   <Layout>
     <h1>Manage</h1>
     <p>You can manage your bot here.</p>
-    <p>{props.json}</p>
+    <p />
     <style>{`
       @import url('https://fonts.googleapis.com/css?family=Montserrat');
 

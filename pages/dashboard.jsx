@@ -28,15 +28,15 @@ const Page = withRouter(props => (
       You currently own <b>{props.router.query.user.guildsInside.length}(s)</b>{" "}
       servers with the bot hosted on it.
     </h5>
-    <a
+    <Link
       href="/udb/manage"
-      json={props.router.query.json}
+      json={props.router.query.user.guildsInside}
       className="menubuttons"
     >
       <span id="management" className="main-Menu-Buttons">
         Server Management
       </span>
-    </a>
+    </Link>
     <a href="/log" className="menubuttons">
       <span id="log" className="main-Menu-Buttons">
         Mod Log
@@ -48,7 +48,7 @@ const Page = withRouter(props => (
       </span>
     </a>
     <p id="titledesc">Here are Thonking's Bot Commands and Settings.</p>
-    <h1>Settings</h1>
+    <h1 id="info">Settings</h1>
     <p id="settingsdesc">You can change your bot's settings here.</p>
     <Userinfo />
     <h2>Guilds</h2>
@@ -68,6 +68,8 @@ const Page = withRouter(props => (
 
       @import url('https://fonts.googleapis.com/css?family=Montserrat');
       .avatar {
+        margin-left: 15px;
+        border: 2px solid black;
         border-radius: 50%;
       }
         .settingsguildimg {
