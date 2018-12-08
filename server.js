@@ -4,7 +4,9 @@ const fs = require("fs");
 require("dotenv").config();
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
+const path = require("path");
 const handle = app.getRequestHandler();
+const favicon = require("serve-favicon");
 var session = require("express-session"),
   passport = require("passport"),
   Strategy = require("./node_modules/passport-discord/lib").Strategy;
@@ -20,7 +22,7 @@ app
   .prepare()
   .then(() => {
     const server = express();
-
+    server.use(favicon(path.join(__dirname, "static", "brand", "favicon.ico")));
     // Discord AUthentication
     var scopes = [
       "identify",

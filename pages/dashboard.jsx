@@ -6,6 +6,7 @@ import Hex from "../functions/hexGen.js";
 import Userinfo from "../components/DashboardComponents/userinfoComp.js";
 import ArrayMan from "../components/DashboardComponents/serverArrayManager.js";
 import TimeGreeter from "../functions/Dashboard/TimeGreeter.js";
+import ranColors from "../functions/randomColor.js";
 const manual = {
   marginBottom: 40
 };
@@ -119,18 +120,18 @@ const Page = withRouter(props => (
       }
 
       #management {
-        background: #2ecc71;
+        background: ${Hex()};
         margin: auto auto auto 550px;
         transition: 600ms ease all;
       }
       #log {
-        background: #e67e22;
+        background: ${Hex()};
         margin: auto 10px auto 10px;
         transition: 600ms ease all;
       }
 
       #selectserver {
-        background: #1abc9c;
+        background: ${Hex()};
         margin: auto 10px auto 10px;
         transition: 600ms ease all;
       }

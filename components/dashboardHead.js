@@ -54,7 +54,7 @@ const Header = () => (
     <Link href="/">
       <a style={linkStyle}>Home</a>
     </Link>
-    <Link href="/">
+    <Link href="https://discordapp.com/oauth2/authorize?client_id=495381072612425733&permissions=8&scope=bot">
       <a style={linkStyle}>Invite Bot!</a>
     </Link>
     <Link>SETTINGS</Link>

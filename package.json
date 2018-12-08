@@ -58,6 +58,7 @@
     "reactstrap": "^6.5.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
+    "serve-favicon": "^2.5.0",
     "styled-components": "^4.1.1",
     "universal-cookie": "^3.0.7"
   }
